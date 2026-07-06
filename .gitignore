@@ -1,0 +1,19 @@
+# Keep this repository focused on the static website.
+*
+
+!.gitignore
+!README.md
+!index.html
+!style.css
+!app.js
+!vercel.json
+
+!api/
+!api/**
+
+!public/
+!public/images/
+!public/images/**
+
+.DS_Store
+**/.DS_Store
