@@ -1,10 +1,20 @@
 const GOOGLE_PLACE_DETAILS_URL = "https://places.googleapis.com/v1/places";
 const GOOGLE_FIELD_MASK = "displayName,rating,userRatingCount,reviews";
+const SUCCESS_CACHE_HEADERS = {
+    browser: "public, max-age=0, must-revalidate",
+    cdn: "max-age=86400"
+};
 
-function sendJson(response, statusCode, payload, cacheControl) {
+function sendJson(response, statusCode, payload, cacheHeaders) {
     response.statusCode = statusCode;
     response.setHeader("Content-Type", "application/json; charset=utf-8");
-    response.setHeader("Cache-Control", cacheControl || "no-store");
+    response.setHeader("Cache-Control", cacheHeaders?.browser || "no-store");
+
+    if (cacheHeaders?.cdn) {
+        response.setHeader("CDN-Cache-Control", cacheHeaders.cdn);
+        response.setHeader("Vercel-CDN-Cache-Control", cacheHeaders.cdn);
+    }
+
     response.end(JSON.stringify(payload));
 }
 
@@ -81,7 +91,7 @@ module.exports = async function handler(request, response) {
             overallRating: Number(data.rating || 0),
             totalReviews: Number(data.userRatingCount || 0),
             reviews
-        }, "s-maxage=3600, stale-while-revalidate=86400");
+        }, SUCCESS_CACHE_HEADERS);
     } catch (error) {
         return sendJson(response, 500, {
             error: "Unable to load Google reviews."
