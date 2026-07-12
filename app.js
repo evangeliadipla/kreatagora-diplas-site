@@ -130,8 +130,7 @@ function initScrollRevealAnimations() {
         ...document.querySelectorAll(".contact-map-panel"),
         document.querySelector(".sausages-image"),
         document.querySelector(".sausages-content"),
-        document.querySelector(".founder-image"),
-        document.querySelector(".founder-content"),
+        ...document.querySelectorAll(".generation-card"),
         document.querySelector(".hero-content"),
         document.querySelector(".hero-image-container"),
         document.querySelector(".history-content")
@@ -241,7 +240,7 @@ function renderGoogleReviews(container, data, reviews) {
     attribution.className = "google-reviews-attribution";
 
     const attributionText = document.createElement("span");
-    attributionText.textContent = "Κριτικές από Google";
+    attributionText.textContent = "Κριτικές από Google Maps";
 
     const googleLink = document.createElement("a");
     googleLink.href = GOOGLE_MAPS_REVIEWS_URL;
