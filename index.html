@@ -311,15 +311,51 @@
             </div>
             
             <div class="reviews-wrapper">
-                <!-- Safe placeholder until Google Reviews are connected server-side -->
-                <div id="google-reviews-container" class="reviews-grid">
-                    <div class="reviews-api-placeholder" id="reviews-placeholder">
-                        <div class="placeholder-icon">
-                            <svg viewBox="0 0 24 24" class="google-logo-icon"><path d="M21.35,11.1H12V14.9H17.6C16.9,16.5 15.6,17.7 13.7,18.4L13.7,21H19.7C23.1,17.8 25,13.1 25,7.7C25,6.5 24.8,5.4 24.5,4.3H12V8.1H19C18.6,9.2 18,10.2 17.2,11L21.35,11.1Z" fill="#4285F4"/><path d="M12,25C15.2,25 18,23.9 20,22.1L13.7,19.5C12.3,20.4 10.6,20.8 8.8,20.8C5.2,20.8 2.2,18.3 1.1,14.9H-5.1L-5.1,17.6C-2.9,22 -0.2,25 3.8,25H12Z" fill="#34A853"/><path d="M1.1,14.9C0.8,14 0.6,13.1 0.6,12C0.6,10.9 0.8,10 1.1,9.1V6.4H-5.1C-6.2,8.6 -6.8,10.2 -6.8,12C-6.8,13.8 -6.2,15.4 -5.1,17.6L1.1,14.9Z" fill="#FBBC05"/><path d="M12,3.2C13.8,3.2 15.4,3.8 16.7,5L19.6,2.1C17.7,0.8 15.2,0 12,0C8,0 4.5,2.3 2.3,5.6L8.5,8.3C9.6,4.9 12.6,3.2 12,3.2Z" fill="#EA4335"/></svg>
+                <div class="reviews-grid">
+                    <article class="review-card">
+                        <div class="review-card-header">
+                            <span class="review-author">Κλειώ Σωτηρίου</span>
                         </div>
-                        <p class="placeholder-text">
-                            Οι κριτικές Google θα εμφανιστούν εδώ μόλις ολοκληρωθεί η σύνδεση με το Google Places API.
-                        </p>
+                        <div class="review-stars review-card-stars" aria-label="Βαθμολογία 5 στα 5">
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                        </div>
+                        <p class="review-card-text">Εξαιρετική ποιότητα κρεάτων και άψογο προσωπικό</p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card-header">
+                            <span class="review-author">Αφροδίτη Ευγενίδου</span>
+                        </div>
+                        <div class="review-stars review-card-stars" aria-label="Βαθμολογία 5 στα 5">
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                        </div>
+                        <p class="review-card-text">Όχι μόνο την καλύτερη ποιότητα αλλά και την καλύτερη εξυπηρέτηση. Μένω πάντα ευχαριστημένη</p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card-header">
+                            <span class="review-author">Danai Chanlaridou</span>
+                        </div>
+                        <div class="review-stars review-card-stars" aria-label="Βαθμολογία 5 στα 5">
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                            <span class="review-star is-filled">★</span>
+                        </div>
+                        <p class="review-card-text">Η καλύτερη ποιότητα κρέατος και άριστη εξυπηρέτηση !! 👌</p>
+                    </article>
+
+                    <div class="google-reviews-attribution">
+                        <span>Ενδεικτικές κριτικές από Google Maps</span>
                         <a href="https://maps.app.goo.gl/VChRGwDJWQ6TteyG8" target="_blank" rel="noopener" class="btn btn-secondary reviews-google-btn">
                             Δείτε τις κριτικές στο Google
                         </a>
